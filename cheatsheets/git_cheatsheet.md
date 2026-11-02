@@ -43,3 +43,11 @@ Firstly, REMOTE IS JUST WHAT YOU CALL THE REMOTE VERSION OF YOUR REPO.
 
 ## Might be useful
 ![](image_1.png)
+
+## Undoing and stuff
+1. What if you put wrong commit message? git commit --amend -m "NEW MESSAGE"
+2. What if you forget to commit one file? git add remainingfile.txt | git commit --amend --no-edit
+3. What if you accidently commit to wrong branch? git reset --hard HEAD~1
+
+## Visualization
+1. Show graph: git log --graph
