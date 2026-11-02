@@ -35,7 +35,7 @@ len(numbers)         # Get length
 20 in numbers        # Check membership
 ```
 
-## 7. Tuples
+## 2. Tuples
 
 Tuples are ordered and **immutable** collections.
 
@@ -60,7 +60,7 @@ single = (10,)
 
 Remember to include the comma when creating a single-element tuple.
 
-## 8. Dictionaries
+## 3. Dictionaries
 
 Dictionaries store data in key-value pairs.
 
@@ -120,7 +120,7 @@ data = [(1, "A"), (2, "B"), (3, "C")] # [(1, 'A'), (2, 'B'), (3, 'C')]
 data_dict = dict(data) # {1: 'A', 2: 'B', 3: 'C'}
 ```
 
-## 9. Sets
+## 4. Sets
 
 Sets store unique elements and are unordered.
 
@@ -149,7 +149,7 @@ a.difference(b)             # Elements in a but not b
 a.symmetric_difference(b)   # Elements in either, but not both
 ```
 
-## 10. Functions
+## 5. Functions
 
 Functions are reusable blocks of code that perform a specific task.
 
@@ -206,7 +206,7 @@ def details(**kwargs):
 details(name="John", age=25)
 ```
 
-## 11. List Comprehension
+## 6. List Comprehension
 
 List comprehension provides a shorter way to create lists.
 
@@ -229,7 +229,7 @@ for number in numbers:
     squares.append(number ** 2)
 ```
 
-## 12. Useful Built-in Functions
+## 7. Useful Built-in Functions
 
 - `print()` – Display output.
 - `input()` – Take user input.
@@ -244,12 +244,24 @@ for number in numbers:
 - `enumerate()` – Get index and value while iterating.
 - `zip()` – Combine multiple iterables.
 - `map()` – Apply a function to every element.
+```python
+>>> double = map(lambda i: i*2, a)
+>>> print(list(double))
+[2, 4, 6]
+>>> 
+```
 - `filter()` – Filter elements based on a condition.
+```python
+>>> a = [1,2,3,4]
+>>> evens = filter(lambda i: i % 2 == 0, a)
+>>> print(list(evens))
+[2, 4]
+>>> 
+```
 - `any()` – Return `True` if at least one element is true.
 - `all()` – Return `True` if all elements are true.
 - `abs()` – Get the absolute value.
 - `round()` – Round a number.
-- `isinstance()` – Check an object's type.
 
 ### Examples
 
