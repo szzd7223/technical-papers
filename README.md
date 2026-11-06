@@ -5,3 +5,4 @@
 4. [Python Data Structures and Functions cheatsheet](cheatsheets/python_data_structures_cheatsheet.md)
 5. [PEP-8 Cheatsheet](cheatsheets/pep_8_cheatsheet.md)
 6. [Python OOP Cheatsheet](cheatsheets/python_OOP_cheatsheet.md)
+7. [SOLID Principles](cheatsheets/SOLID_principles.md)
