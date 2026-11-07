@@ -31,6 +31,9 @@ class Car:
     def start_engine():
         print("Engine has started")
 ```
+* What does `self` mean? It refers to the object.
+* `__init__(self, ...)` is the contructor method
+
 
 ## 4 Pillars of OOP
 1. **Inheritence**:
@@ -49,25 +52,69 @@ dog.eat()   # Inherited from Animal
 dog.bark()  # Defined in Dog
 ```
 2. **Polymorphism**:
-Polymorphism means same operation, different behaviour. It allows functions or methods of the same name work differently depending upon the type of object they are acting upon.
-```python
-class Dog:
-    def sound(self):
-        print("Bark")
+* Polymorphism means same operation, different behaviour. It allows functions or methods of the same name work differently depending upon the type of object they are acting upon.
+**"Many Forms"**.
 
-class Cat:
-    def sound(self):
-        print("Meow")
+* Two ways to achieve polymorphism
+    1. Inheritance
+    ```python
+    drom abs import ABC, abstractmethod
+    
+    class Shape(ABC):
+    
+        @abstractmethod
+        def area(self):
+            pass
+    
+    class Circle(Shape):
+        def __init__(self, radius):
+            self.radius = radius
+    
+        def area(self):
+            return 3.14 * self.radius * self.radius
+    
+    class Rectangle(Shape):
+        def __init__(self, width, height):
+            self.width = width
+            self.height = height
+    
+        def area(self):
+            return self.width * self.height
+    
+    class Pizza(Circle):
+        def __init__(self, toppings, radius):
+            self.toppings = toppings
+            self.radius = radius
+    
+        def area(self):
+            return 3.14 * self.radius * self.radius
+    
+    shapes = [Circle(6), Rectangle(4,5), Pizza("BBQ Chicken", 12)]
+    
+    for shape in shapes:
+        print(shape.area())
+        
+    ```
+    In this example, circle, rectangle and even pizza all are shapes, and all have area, so they are all shapes in many forms.
+    
+    2. Duck Typing
+    - Another way to achieve polymorphism, besides inheritence
+    ```python
+    class Animal:
+        alive = True
+        
+    def Dog(Animal):
+        def speak("Woof")
 
-class Cow:
-    def sound(self):
-        print("Moo")
+    def Cat(Animal):
+        def speak("Meow")
 
-animals = [Dog(), Cat(), Cow()]
+    class Car:
+        alive = False
 
-for animal in animals:
-    animal.sound()
-```
+        def speak("Honk")
+    ```
+
 
 3. **Encapsulation**:
 Encapsulation is the bundling of data (attributes) and methods (functions) within a class. Restricting access to components to control interactions.
@@ -117,6 +164,34 @@ car = Car()
 car.start()
 ```
 
+## Class vs Intance variables:
+* Instance variable belongs to object. Each object has its own Instance variables
+* Class variable belongs to class. Each object shares the class variables. These can also be accessed directly from the class.
+```python
+class Student:
+
+    class_year = 2026 # Class variable
+    no_of_students = 0
+    
+    def __init__(self, name, age):
+        self.name = name # Instance variable
+        self.age = age # Instance variable
+        Student.no_of_students += 1
+
+student1 = Student("Alex", 23)
+student2 = Student("Bob", 22)
+
+# Accessing instance varibles (which belong to object)
+student1.name # "Alex"
+student2.name # "Bob"
+
+# Accessing class variables (either through object or through class name only)
+student1.class_year # 2026
+student2.class_year # 2026
+Student.class_year # 2026 # It is good Practice too.
+Student.no_of_students # 2
+```
+
 ## Some Syntax To Remember
 
 ### Abstract class
@@ -159,6 +234,25 @@ class Car(Vehicle):
 
     def stop(self):
         print("Car Stopped")
+```
+
+### `super()` keyword
+* It is used to reference the parent class
+* Example
+```python
+class Shape:
+    def __init__(self, color, is_filled):
+        self.color = color
+        self.is_filled = is_filled
+
+class Circle:
+    def __init__(color, is_filled, radius):
+        super().__init__(color, is_filled)
+        self.radius = radius
+
+class Square:
+    def __init__(self, color, is_filled, side):
+        super().__init__(color, is_filled)
 ```
 
 
@@ -271,3 +365,6 @@ team = Team(["John", "Alex", "Sam"])
 print(team[0])  # John
 print(team[1])  # Alex
 ```
+
+## References
+* [Python Object Oriented Programming Full Course - Bro Code](https://www.youtube.com/watch?v=IbMDCwVm63M)
