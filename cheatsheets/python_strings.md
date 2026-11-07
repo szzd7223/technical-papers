@@ -157,3 +157,6 @@ s = "Hello"
 rev = s[::-1]
 print(rev) # Prints "olleH"
 ```
+
+## References:
+[Python String - GeeksForGeeks](https://www.geeksforgeeks.org/python/python-string/)
