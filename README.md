@@ -7,3 +7,5 @@
 6. [Python OOP Cheatsheet](cheatsheets/python_OOP_cheatsheet.md)
 7. [SOLID Principles](cheatsheets/SOLID_principles.md)
 8. [Python Strings](cheatsheets/python_strings.md)
+9. [SQL](cheatsheets/sql.md)
+10. [SQL Theory](cheatsheets/sql_theory.md)
