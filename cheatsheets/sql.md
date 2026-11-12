@@ -520,8 +520,8 @@ test_db=# SELECT SUBSTRING('John Doe', 3, 4) AS name;
 ```
 
 ## References
-[SQL Cheat Sheet](https://www.dbvis.com/wp-content/uploads/2024/04/SQL-Cheat-Sheet.pdf)
-[SQL Bolt](https://sqlbolt.com/)
-[PostgreSQL Exercises](https://pgexercises.com)
-[SQL Date & Time Functions by Data with Barra](https://www.youtube.com/watch?v=7RCxH9x5StM&t=2251s)
-[SQL String Functions by Data with Barra](https://www.youtube.com/watch?v=NOTWx5s-s1o)
+- [SQL Cheat Sheet](https://www.dbvis.com/wp-content/uploads/2024/04/SQL-Cheat-Sheet.pdf)
+- [SQL Bolt](https://sqlbolt.com/)
+- [PostgreSQL Exercises](https://pgexercises.com)
+- [SQL Date & Time Functions by Data with Barra](https://www.youtube.com/watch?v=7RCxH9x5StM&t=2251s)
+- [SQL String Functions by Data with Barra](https://www.youtube.com/watch?v=NOTWx5s-s1o)
