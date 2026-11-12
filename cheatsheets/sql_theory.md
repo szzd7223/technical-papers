@@ -558,6 +558,55 @@ Now:
 
 **Result:** Every non-trivial functional dependency has a superkey as its determinant, and the tables satisfy BCNF.
 
+
+## Indexes
+- An index is a database object that helps retrieve data faster from a table.
+- It works like an index in a book, allowing the database to find records without scanning the entire table.
+- Indexes improve SELECT query performance but require additional storage and can slow down INSERT, UPDATE and DELETE operations.
+
+### Index Syntax
+```sql
+CREATE INDEX index_name
+ON table_name (column_name);
+```
+
+### Example: Employee Table
+
+Suppose we frequently search for employees using their `employee_id`.
+
+**1. Create an index**
+```sql
+CREATE INDEX idx_employee_id
+ON employees (employee_id);
+```
+
+**2. Use the index automatically**
+```sql
+SELECT * FROM employees
+WHERE employee_id = 101;
+```
+
+PostgreSQL can use the index to find the employee faster.
+
+### Other Useful Commands
+
+**View indexes:**
+```sql
+\d employees
+```
+
+**Delete an index:**
+```sql
+DROP INDEX idx_employee_id;
+```
+
+### Important Points
+- Indexes speed up data retrieval.
+- They require additional storage.
+- They can slow down INSERT, UPDATE and DELETE operations.
+- Primary keys and UNIQUE constraints automatically create indexes in PostgreSQL.
+
+
 ## Transactions
 - A unit of work in DB terms is called a Transaction.
 - Example: A bank system fund transfer.
